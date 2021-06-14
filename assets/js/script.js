@@ -1,0 +1,1 @@
+document.getElementsByClassName("parrafo")[1].innerHTML="Hola soy un texto diferente";
