@@ -8,7 +8,28 @@ let lista2= document.querySelector("#marcas");
 let lista3= document.querySelector("#companeros");
 
 
-lista1.addEventListener("click",function(){
+function inicializar(){
+    displayList(lista1,animales);
+    displayList(lista2,marcasPC);
+    displayList(lista3,nombres);
+}
+
+
+function displayList(boton,unaLista){
+    boton.addEventListener("click", function(){
+        lista.textContent="";
+        unaLista.forEach(elemento => {
+            let item=document.createElement("li");
+            item.textContent=elemento;
+            lista.appendChild(item);
+        });
+    })
+}
+
+
+inicializar();
+
+/* lista1.addEventListener("click",function(){
     lista.textContent="";
     animales.forEach(function(animal){
         let item=document.createElement("li");
@@ -35,5 +56,6 @@ lista3.addEventListener("click",function(){
         item.textContent=personas;
         lista.appendChild(item);
     });
-    
 });
+
+*/
